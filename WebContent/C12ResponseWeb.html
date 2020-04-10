@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12ResponseWeb.html</title>
+    <style type="text/css">
+        /* 전체선택자를 통해 문서의 기본스타일 지정 */
+        *{margin: 0; padding: 0; font-family: verdana;}
+        /* Block엘리먼트 자체에 대한 가운데 정렬을 위해 margin이 사용된다. */
+        #AllWrap{
+            margin: 0 auto; text-align: center;
+        }
+        #PartWrap{
+            width: 100%; text-align: left;
+            border: 1px solid blue;
+        }
+        #header{
+            border: 1px solid blue; text-align: center;
+            height: 100%; line-height: 100px;
+        }
+        /* 
+        <li>태그의 기본 블릿을 제거한다.
+            overflow의 속성값
+                visible : 컨텐츠가 박스를 넘어가도 보임
+                hidden : 박스를 벗어난 부분은 숨겨짐
+                scroll : 컨텐츠와는 상관없이 무조건 스크롤바 생김
+                auto : 컨텐츠의 상황에 따라 스크롤바 토글됨.
+        */
+        #nav ul{
+            list-style: none; 
+
+            overflow: auto;
+        }
+        #nav ul li{
+            font-size: 1.5em; font-weight: bold; height: 50px;
+            width: 20%; float: left; border: 1px solid blue;
+            text-align: center; line-height: 50px;
+            /* 전체넓이에 패딩과 보더를 포함하여 지정함. */
+            box-sizing: border-box;
+        }
+        #ContentWrap #content > h2{
+            border-bottom: 1px #808080 solid;
+            font-size: 2em;
+        }
+        #content{
+            padding: 20px;
+        }
+        #footer{
+            font-size: 2em; font-weight: bold; height: 100px;
+            line-height: 100px; text-align: center;
+            border: 1px solid blue;
+        }
+        /* 스크린의 크기가 640px 이상일때(혹은 디바이스)에서의 보임설정 */
+        @media screen and (max-width: 640px){
+            #AllWrap{width: 100%;}
+            #content p{
+                font-size: 2em; color: black;
+            }
+        }
+        /* 스크린의 크기가 1000 이상*/
+        @media screen and (min-width: 1000px){
+            #AllWrap{width: 80%;}
+            #content p{
+                font-size: 1em; color: green;
+            }
+        }
+        /* 스크린의 크기가 641~999px 사이 */
+        @media screen and (min-width: 641px) and (max-width:999px){
+            #AllWrap{width: 100%;}
+            #content p{
+                font-size: 1.5em; color: red;
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="AllWrap">
+        <div id="PartWrap">
+            <div id="header">
+                <h1>HEADER</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li>메뉴1입니다.</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                    <li>메뉴4</li>
+                    <li>메뉴5</li>
+                </ul>
+            </div>
+        </div>
+        <div id="ContentWrap">
+            <div id="content">
+                <h2>르노삼성차 찾은 오거돈 부산시장 "XM3 만족"</h2>
+                <p>
+                    오거돈 부산시장이 르노삼성자동차 XM3를 타고 큰 만족감을 표했다.  
+                    <br><br>
+                    10일 르노삼성차에 따르면 9일 오거돈 부산광역시장이 르노삼성자동차 부산공장을 방문해 코로나19 위기 극복을 위해 노사가 함께 힘을 모아줄 것을 당부하고 XM3의 성공을 위한 부산시 차원의 적극적인 지원도 약속했다고 밝혔다.
+                    <br><br>
+                    오 시장의 이번 방문은 코로나19로 많은 기업들이 어려움을 겪고 있는 상황에서 부산시 대표 기업인 르노삼성자동차의 공장 가동 현황을 파악하기 위해서다 자동차 업계를 비롯한 지역 제조업체의 애로사항에 대한 지원책을 모색하기 위해 이뤄졌다.
+                    <br><br>
+                    오 시장은 도미닉시뇨라 르노삼성자동차 사장과의 면담 자리에서 르노삼성차 부산공장이 코로나19로 인한 위기 상황에서도 XM3, QM6, SM6 등 주력 차종을 정상적으로 생산하고 있고, 더 나아가 르노그룹 내 벤치마킹 사례로 주목받고 있다는 사실에 르노삼성자동차 임직원들의 노고에 감사를 표하고 코로나19 극복을 위한 부산시의 적극적인 지원을 약속했다.
+                    <br><br>
+                    글로벌 시장에서 코로나19 상황이 장기화될 경우 부품 공급에 어려움이 따를 수 있음을 공감하고 이를 대비한 정부 지원 및 고용 안정화 방안 등에 대해서도 논의하는 시간을 가졌다.
+                    <br><br>
+                    별도로 가진 르노삼성자동차 노동조합과의 면담 자리에서 오 시장은 노조 측의 입장을 청취하는 한편 노사가 한마음 되어 빠른 시간 내 안정된 노사 상생 관계를 구축해 줄 것을 당부했다. 특히 이러한 위기 상황에서 노사정이 함께 힘을 모아 어려움을 극복해 간다면 새로운 미래를 함께 만들어 갈수 있을 것이라고 강조했다.
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>FOOTER</h1>
+        </div>
+    </div>
+</body>
+</html>
