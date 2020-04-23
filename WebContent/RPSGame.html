@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPSGame.html</title>
+</head>
+<body>
+	<h3>가위바위보게임</h3>
+	<script>
+        function fnChangeImg(imgNum){
+            var img_tag = document.getElementById("RPS");
+            img_tag.src = "./images/"+ imgNum +".jpg";
+            // img_tag.width = parseInt(imgNum * 10);
+        }
+
+		function ranNum(){
+            var com = parseInt((Math.random()*3)+1);
+			if(com==1){
+				<img src="./images/11.jpg" alt="">
+			}
+		}
+    </script>
+	<table border=1 width='300'>
+		<tr>
+			<td>컴퓨터</td>
+			<td>나</td>
+		</tr>
+		<tr>
+			<td><img src="./images/start.png" alt=""></td>
+			<td><img id="RPS" src="./images/start.png" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="2"></td>
+			<!-- <td>3행2열</td> -->
+		</tr>
+	</table>
+	<button onclick="fnChangeImg();">
+		<a href="javascript:fnChangeImg(11);">가위</a>
+	</button>
+	<button onclick="fnChangeImg();">
+		<a href="javascript:fnChangeImg(12);">바위</a>
+	</button>
+	<button onclick="fnChangeImg();">
+		<a href="javascript:fnChangeImg(13);">보</a>
+	</button>
+</body>
+</html>
